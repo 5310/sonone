@@ -4,7 +4,7 @@
 	<title>@@sketch@@ : Built with Processing and Processing.js</title>
 	<link rel="icon"  type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAQAAVzABAEAjBQAaDwYAWjUGAGE6CQBrQQ0ATS8PAFhAJwBUQC8AbFI6AHVXPACBZk4A4NrWAPb19QAAAAAAAMmZmZmZmgAJIwAAAAAAcMIjPjA+PjAKpxIuMDMzMAm0Ii4zMzMACaIiLt3dMAAJtyIuIzPQAAm0Un5yM+IzKLRkfncy4iIotRF+dyLkIiq0QX53F+EiGrQUTkd34iIatEVu7u5iIVrBVVRBRFRVbAtGZGZla2uwAMu7u7u8vADAAwAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAADAAwAA" />
 	<meta name="Generator" content="Processing" />
-	<meta id="viewport" name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.6" />
+	<meta id="viewport" name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=0.4" />
 	<!-- - - - - - - - - - - - - - - - - - - - - 
 	+
 	+    Wondering how this works? 
@@ -43,18 +43,21 @@
 	    }
 	    #content {
 		position: absolute;
-		left: 50%;
-		top: 50%;
+		/*left: 50%;
+		top: 50%;*/
+		left: 0; right: 0; top: 0; bottom: 0;
 	    }
 	    #content canvas { 
+		background: #E4E4E4;
 		display: block; 
+		/*margin-left: -50%;
+		margin-top: -50%;*/
 		outline: 0px;
-		margin-left: -50%;
-		margin-top: -50%;
 		border-radius: 10px;
 		box-shadow: 0 10px 0 0 #666, 0 10px 5px 5px rgba(0, 0, 0, 0.25);
-		border-top: 2px solid white;
-		border-bottom: 2px solid white;
+		box-sizing: border-box;
+		border-top: 2px solid rgba(255, 255, 255, 0.5);
+		border-bottom: 2px solid rgba(255, 255, 255, 0.25);
 	    }
 	</style>
 	<!--[if lt IE 9]>

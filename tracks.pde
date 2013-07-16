@@ -25,7 +25,7 @@ class Tracks {
     float keyHeight = height/HEIGHT;
     
     pushStyle();
-    strokeWeight(4);
+    strokeWeight(SIZE/8);
     stroke(color(0, 0, 1, 0.5));
     float y = ( position + 0.5 + map((frameCount-1)%floor(FPS*tempo), 0, floor(FPS*tempo), 0, 1) ) * keyHeight;
     line( 0, y, width, y );
@@ -42,7 +42,7 @@ class Tracks {
             fill(#222222); 
             stroke(color(0, 0, 0.2, 0.5));
           }
-          strokeWeight(5);
+          strokeWeight(SIZE/6);
           ellipse((i+0.5)*keyWidth, (j+0.5)*keyHeight, keyWidth/2, keyHeight/2);
           popStyle();
         }

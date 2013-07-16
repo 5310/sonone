@@ -1,8 +1,3 @@
-int FPS = 60;
-int TEMPO = 1/6;
-int WIDTH = 16;
-int HEIGHT = 16;
-
 Notes notes;
 Viz viz;
 Tracks tracks;
@@ -10,8 +5,9 @@ Tracks tracks;
 boolean add;
 
 void setup() {
-
-  size(480, 480);
+  
+  size(WIDTH*SIZE, HEIGHT*SIZE);
+  center();
   colorMode(HSB, 1.0); 
   background(color(0, 0, 0.9));
   frameRate(FPS);
