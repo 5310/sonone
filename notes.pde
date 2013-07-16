@@ -31,9 +31,9 @@ class Notes {
   }
 
   void play( int _index ) {
+    notes[_index].stop();
     notes[_index].cue(0);
     notes[_index].play();
-    println(_index);
   }
 }
 
