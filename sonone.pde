@@ -4,6 +4,8 @@ Tracks tracks;
 
 int fps = 60;
 
+boolean add;
+
 void setup() {
 
   size(480, 480);
@@ -27,16 +29,26 @@ void draw() {
 }
 
 void mousePressed() {
+  if ( tracks.getKey( mouseX, mouseY ) ) {
+    add = false;
+  } else {
+    add = true;
+  }
 }
 
 void mouseDragged() {
+  if ( add ) {
+    tracks.setKey(mouseX, mouseY, true);
+  } else {
+    tracks.setKey(mouseX, mouseY, false);
+  }
 }
 
 void mouseReleased() {
-  if ( tracks.getKey( mouseX, mouseY ) ) {
-    tracks.setKey(mouseX, mouseY, false);
-  } else {
+  if ( add ) {
     tracks.setKey(mouseX, mouseY, true);
+  } else {
+    tracks.setKey(mouseX, mouseY, false);
   }
   /*viz.ping( 
   (int)map(mouseX, 0, width, 0, viz.canvas.width), 
