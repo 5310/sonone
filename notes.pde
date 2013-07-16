@@ -2,7 +2,7 @@ Maxim maxim = new Maxim(this);
 
 class Notes {
 
-  ArrayList<AudioPlayer> notes;
+  AudioPlayer[] notes;
 
   String[] files = {
     "3f.mp3", 
@@ -24,23 +24,16 @@ class Notes {
   };
 
   Notes() {
-    notes = new ArrayList<AudioPlayer>();
-  }
-
-  void draw() {
-    // Play newly added note, because Maxim.js does not seem to be able to play immediately after creation of the note.
-    if ( notes.size() > 0 ) notes.get(notes.size()-1).play();
-    // Remove all older notes if they're not playing.
-    for ( int i = 0; i < notes.size()-1; i++ ) {
-      AudioPlayer note = notes.get(i);
+    notes = new AudioPlayer[files.length];
+    for ( int i = 0; i < files.length; i++ ) {
+       notes[i] = maxim.loadFile(files[i]); 
     }
   }
 
   void play( int _index ) {
-    String file = files[_index];
-    AudioPlayer note = maxim.loadFile(file);
-    //note.play();
-    notes.add(note);
+    notes[_index].cue(0);
+    notes[_index].play();
+    println(_index);
   }
 }
 

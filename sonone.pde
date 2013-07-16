@@ -22,7 +22,6 @@ void setup() {
 }
 
 void draw() {
-  notes.draw();
   viz.draw();
   tracks.draw();
 }
@@ -34,7 +33,11 @@ void mouseDragged() {
 }
 
 void mouseReleased() {
-  tracks.setKey(mouseX, mouseY, true);
+  if ( tracks.getKey( mouseX, mouseY ) ) {
+    tracks.setKey(mouseX, mouseY, false);
+  } else {
+    tracks.setKey(mouseX, mouseY, true);
+  }
   /*viz.ping( 
   (int)map(mouseX, 0, width, 0, viz.canvas.width), 
   (int)map(mouseY, 0, height, 0, viz.canvas.height)
