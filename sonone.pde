@@ -8,7 +8,7 @@ void setup() {
   frameRate(60);
   //noSmooth();
 
-  viz = new Viz(color(0, 0, 0.9, 0.05));
+  viz = new Viz(color(0, 0, 0.88, 0.05));
 }
 
 void draw() {
@@ -30,5 +30,10 @@ void mouseDragged() {
 }
 
 void mouseReleased() {
+  viz.ping( 
+  (int)map(mouseX, 0, width, 0, viz.canvas.width), 
+  (int)map(mouseY, 0, height, 0, viz.canvas.height), 
+  color(map(mouseX, 0, width, 0, 1), 0.75, 1)
+    );
 }
 
