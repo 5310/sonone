@@ -1,21 +1,30 @@
 Notes notes;
 Viz viz;
+Tracks tracks;
+
+int fps = 60;
 
 void setup() {
 
   size(480, 480);
   colorMode(HSB, 1.0); 
   background(color(0, 0, 0.9));
-  frameRate(60);
+  frameRate(fps);
   //noSmooth();
 
   notes = new Notes();
   viz = new Viz(color(0, 0, 0.88, 0.05));
+  tracks = new Tracks();
+  
+  for ( int k = 0; k < 20; k++ ) {
+    //tracks.keys[floor(random(0, tracks.keys.length))][floor(random(0, tracks.keys[0].length))] = true;
+  }
 }
 
 void draw() {
-  viz.draw();
   notes.draw();
+  viz.draw();
+  tracks.draw();
 }
 
 void mousePressed() {
@@ -25,10 +34,10 @@ void mouseDragged() {
 }
 
 void mouseReleased() {
-  viz.ping( 
+  tracks.setKey(mouseX, mouseY, true);
+  /*viz.ping( 
   (int)map(mouseX, 0, width, 0, viz.canvas.width), 
-  (int)map(mouseY, 0, height, 0, viz.canvas.height), 
-  color(map(mouseX, 0, width, 0, 1), 0.75, 1)
-    );
+  (int)map(mouseY, 0, height, 0, viz.canvas.height)
+    );*/
 }
 
