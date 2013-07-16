@@ -5,22 +5,22 @@ class Notes {
   ArrayList<AudioPlayer> notes;
 
   String[] files = {
-    "3f.wav", 
-    "3g.wav", 
-    "3a.wav", 
-    "3b.wav", 
-    "4c.wav", 
-    "4d.wav", 
-    "4e.wav", 
-    "4f.wav", 
-    "4g.wav", 
-    "4a.wav", 
-    "4b.wav", 
-    "5c.wav", 
-    "5d.wav", 
-    "5e.wav", 
-    "5f.wav", 
-    "5g.wav",
+    "3f.mp3", 
+    "3g.mp3", 
+    "3a.mp3", 
+    "3b.mp3", 
+    "4c.mp3", 
+    "4d.mp3", 
+    "4e.mp3", 
+    "4f.mp3", 
+    "4g.mp3", 
+    "4a.mp3", 
+    "4b.mp3", 
+    "5c.mp3", 
+    "5d.mp3", 
+    "5e.mp3", 
+    "5f.mp3", 
+    "5g.mp3",
   };
 
   Notes() {
