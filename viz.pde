@@ -7,7 +7,7 @@ class Viz {
 
   Viz( color _background ) {
 
-    canvas = createGraphics(16, 16);
+    canvas = createGraphics(WIDTH, HEIGHT);
     background = _background;
         
     pings = new ArrayList<Ping>();

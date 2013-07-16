@@ -1,8 +1,11 @@
+int FPS = 60;
+int TEMPO = 1/4;
+int WIDTH = 16;
+int HEIGHT = 32;
+
 Notes notes;
 Viz viz;
 Tracks tracks;
-
-int fps = 60;
 
 boolean add;
 
@@ -11,7 +14,7 @@ void setup() {
   size(480, 480);
   colorMode(HSB, 1.0); 
   background(color(0, 0, 0.9));
-  frameRate(fps);
+  frameRate(FPS);
   //noSmooth();
 
   notes = new Notes();

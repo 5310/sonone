@@ -6,14 +6,14 @@ class Tracks {
 
   Tracks() {
     
-    keys = new boolean[16][16];
+    keys = new boolean[WIDTH][HEIGHT];
     for ( var i = 0; i < keys.length; i++ ) {
       for ( var j = 0; j < keys[0].length; j++ ) {
         keys[i][j] = false;
       }
     }
     
-    tempo = 1/4;
+    tempo = TEMPO;
     position = 0;
     wait = true;
     
@@ -21,11 +21,13 @@ class Tracks {
   
   void draw() {
     
+    float keyWidth = width/WIDTH;
+    float keyHeight = height/HEIGHT;
     
     pushStyle();
     strokeWeight(4);
     stroke(color(0, 0, 1, 0.5));
-    float y = ( position + 0.5 + map((frameCount-1)%floor(fps*tempo), 0, floor(fps*tempo), 0, 1) ) * 30;
+    float y = ( position + 0.5 + map((frameCount-1)%floor(FPS*tempo), 0, floor(FPS*tempo), 0, 1) ) * keyHeight;
     line( 0, y, width, y );
     popStyle();
     
@@ -41,13 +43,13 @@ class Tracks {
             stroke(color(0, 0, 0.2, 0.5));
           }
           strokeWeight(5);
-          ellipse((i+0.5)*30, (j+0.5)*30, 15, 15);
+          ellipse((i+0.5)*keyWidth, (j+0.5)*keyHeight, keyWidth/2, keyHeight/2);
           popStyle();
         }
       }
     }
     
-    if ( frameCount%floor(fps*tempo) == 0 ) {
+    if ( frameCount%floor(FPS*tempo) == 0 ) {
       position++;
       position%=keys[0].length;
       for ( var i = 0; i < keys.length; i++ ) {
