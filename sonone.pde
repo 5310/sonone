@@ -1,7 +1,7 @@
 int FPS = 60;
-int TEMPO = 1/4;
+int TEMPO = 1/6;
 int WIDTH = 16;
-int HEIGHT = 32;
+int HEIGHT = 16;
 
 Notes notes;
 Viz viz;
