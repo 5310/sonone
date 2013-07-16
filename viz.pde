@@ -35,7 +35,8 @@ class Viz {
   }
 
   void ping( int _x, int _y, color _c ) {
-    pings.add(new Ping( _x+0.5, _y+0.5, _c ));
+    pings.add(new Ping( _x+0.5, _y+0.5, _c));
+    notes.play(_x);
   }
   
 }

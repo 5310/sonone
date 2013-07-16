@@ -1,9 +1,12 @@
 class Ping {
   
   float x, y;
+  
   color c;
   float a, aDecay;
+  
   float radius, radiusGrowth;
+  
   boolean alive;
 
   Ping( float _x, float _y, color _c ) {
