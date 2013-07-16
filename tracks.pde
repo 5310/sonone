@@ -23,8 +23,8 @@ class Tracks {
     
     
     pushStyle();
-    strokeWeight(2);
-    stroke(color(0, 0, 1, 0.75));
+    strokeWeight(4);
+    stroke(color(0, 0, 1, 0.5));
     float y = ( position + 0.5 + map((frameCount-1)%floor(fps*tempo), 0, floor(fps*tempo), 0, 1) ) * 30;
     line( 0, y, width, y );
     popStyle();
@@ -38,7 +38,7 @@ class Tracks {
             stroke(color(0, 0, 1, 0.5));
           } else {
             fill(#222222); 
-            stroke(#222222);
+            stroke(color(0, 0, 0.2, 0.5));
           }
           strokeWeight(5);
           ellipse((i+0.5)*30, (j+0.5)*30, 15, 15);
@@ -58,6 +58,12 @@ class Tracks {
       }
     }
     
+  }
+  
+  boolean getKey( float _x, float _y ) {
+    int x = (int)map(_x, 0, width, 0, viz.canvas.width);
+    int y = (int)map(_y, 0, height, 0, viz.canvas.height);
+    return keys[x][y];
   }
   
   void setKey( float _x, float _y, boolean _value) {
