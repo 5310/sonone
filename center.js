@@ -2,8 +2,6 @@
 center = function() {
   var container = document.getElementById("content");
   var sketch = document.getElementById("sonone");
-  console.log(container);
-  console.log(sketch); 
   sketch.style.marginLeft = (( container.offsetWidth - sketch.offsetWidth )/2)+"px";
   sketch.style.marginTop = (( container.offsetHeight - sketch.offsetHeight )/2)+"px";
   if ( !center.set ) {
@@ -11,4 +9,3 @@ center = function() {
     center.set = true;
   }
 }
-

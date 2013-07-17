@@ -1,3 +1,5 @@
+// Main script.
+
 Notes notes; // Plays all the notes.
 Viz viz; // Visualizes all the notes.
 Tracks tracks; // Tracks the loop's pattern.
@@ -62,4 +64,3 @@ void mouseReleased() {
     tracks.setKey(mouseX, mouseY, false);
   }
 }
-
