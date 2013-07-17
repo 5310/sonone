@@ -18,6 +18,14 @@ void setup() {
   notes = new Notes();
   viz = new Viz(color(0, 0, 0.88, 0.05));
   tracks = new Tracks();
+  
+  // Randomize a pattern.
+  if ( RANDOMIZE ) {
+    for ( int k = 20; k > 0; k-- ) {
+      tracks.setKey( floor(random(0, width)), floor(random(0, height)), true);
+    }
+  }
+  
 }
 
 void draw() {

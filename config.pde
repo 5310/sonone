@@ -7,6 +7,8 @@ int WIDTH = 16;
 int HEIGHT = 16;
 int SIZE = 30;
 
+boolean RANDOMIZE = true;
+
 String[] SAMPLES = {
   "4f.mp3", 
   "4g.mp3", 
