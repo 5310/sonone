@@ -1,3 +1,5 @@
+// Configuration constants.
+
 int FPS = 60;
 int TEMPO = 1/6;
 

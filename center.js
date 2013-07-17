@@ -1,10 +1,4 @@
-/*this.css("position","absolute");
-this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
-                                            $(window).scrollTop()) + "px");
-this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
-                                            $(window).scrollLeft()) + "px");*/
-                                            
-
+// Javascript to center the Processing.js canvas on screen after dynamically setting the size.
 center = function() {
   var container = document.getElementById("content");
   var sketch = document.getElementById("sonone");
