@@ -10,3 +10,5 @@ To use:
 -	Click on any key to remove it.
 -	Drag after either to continue adding/removing keys.
 -	The pattern will loop automatically.
+
+Caveat: The Processing.js audio plugin used in this sketch, Maxim (equivalent to Minim; ported and so wittily named by the instructors), only works in Webkit browsers.
