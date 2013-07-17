@@ -6,6 +6,9 @@ center = function() {
   console.log(sketch); 
   sketch.style.marginLeft = (( container.offsetWidth - sketch.offsetWidth )/2)+"px";
   sketch.style.marginTop = (( container.offsetHeight - sketch.offsetHeight )/2)+"px";
+  if ( !center.set ) {
+    window.onresize = center;
+    center.set = true;
+  }
 }
-
 
