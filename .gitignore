@@ -3,7 +3,6 @@
 #################
 
 web-export/*
-resources/*
 references/*
 .goutputstream-*
 .thumb
