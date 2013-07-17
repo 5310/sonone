@@ -40,8 +40,8 @@ class Viz {
     image(canvas, 0, 0, width, height);
   }
 
+  // Create a ping on specific location on the viz.
   void ping( int _x, int _y ) {
-    // Create a ping on specific location.
     // Get color from location, too.
     color c = color(map(_x, 0, canvas.width, 0, 1), 0.75, 1);
     pings.add(new Ping( _x+0.5, _y+0.5, c));
