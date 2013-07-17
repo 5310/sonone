@@ -24,10 +24,12 @@ class Tracks {
     float keyWidth = width/WIDTH;
     float keyHeight = height/HEIGHT;
     
+    float lerp = map((frameCount-1)%floor(FPS*tempo), 0, floor(FPS*tempo), 0, 1);
+    
     pushStyle();
     strokeWeight(SIZE/8);
     stroke(color(0, 0, 1, 0.5));
-    float y = ( position + 0.5 + map((frameCount-1)%floor(FPS*tempo), 0, floor(FPS*tempo), 0, 1) ) * keyHeight;
+    float y = ( position + 0.5 + lerp ) * keyHeight;
     line( 0, y, width, y );
     popStyle();
     
